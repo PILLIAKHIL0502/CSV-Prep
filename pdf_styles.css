@@ -1,0 +1,327 @@
+/* Professional PDF Book Styling */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --bg-light: #ecf0f1;
+    --text-color: #34495e;
+    --code-bg: #2d2d2d;
+    --border-color: #bdc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-size: 11pt;
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* Headings */
+h1 {
+    color: var(--primary-color);
+    font-size: 28pt;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid var(--secondary-color);
+    page-break-before: always;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+    margin-top: 0;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 20pt;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 16pt;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+h4 {
+    color: var(--text-color);
+    font-size: 14pt;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h5, h6 {
+    color: var(--text-color);
+    font-size: 12pt;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Code blocks */
+pre {
+    background-color: var(--code-bg);
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 15px 0;
+    border-left: 4px solid var(--accent-color);
+    font-size: 9pt;
+    line-height: 1.5;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9pt;
+    color: var(--accent-color);
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #f8f8f2;
+}
+
+/* Blockquotes */
+blockquote {
+    background-color: var(--bg-light);
+    border-left: 5px solid var(--warning-color);
+    padding: 15px 20px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 10pt;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+}
+
+td {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0f7ff;
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 30px 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mermaid diagrams */
+.mermaid {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fafafa;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
+
+/* Table of Contents */
+#TOC {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    page-break-after: always;
+}
+
+#TOC a {
+    color: white;
+    font-weight: 500;
+}
+
+#TOC ul {
+    list-style-type: none;
+}
+
+#TOC > ul > li {
+    margin-bottom: 10px;
+    font-size: 12pt;
+}
+
+/* Source file markers */
+.source-file {
+    background: linear-gradient(90deg, var(--success-color), #16a085);
+    color: white;
+    padding: 10px 15px;
+    margin: 25px 0 15px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+/* Page breaks */
+.page-break {
+    page-break-after: always;
+}
+
+/* Admonitions/Call-outs */
+.note, .warning, .tip, .important {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    border-left: 5px solid;
+}
+
+.note {
+    background-color: #e3f2fd;
+    border-color: var(--secondary-color);
+}
+
+.warning {
+    background-color: #fff3e0;
+    border-color: var(--warning-color);
+}
+
+.tip {
+    background-color: #e8f5e9;
+    border-color: var(--success-color);
+}
+
+.important {
+    background-color: #ffebee;
+    border-color: var(--accent-color);
+}
+
+/* Title page */
+.title-page {
+    text-align: center;
+    padding: 100px 50px;
+    page-break-after: always;
+}
+
+.title-page h1 {
+    font-size: 42pt;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 18pt;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.metadata {
+    font-size: 12pt;
+    color: #7f8c8d;
+    margin-top: 50px;
+}
+
+/* Print specific styles */
+@media print {
+    body {
+        font-size: 10pt;
+    }
+
+    pre {
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    table {
+        page-break-inside: avoid;
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+}
